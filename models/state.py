@@ -19,7 +19,7 @@ class State(BaseModel):
         name (sqlalchemy String): State name.
         cities (sqlalchemy relationship): The State-City relationship.
     """
-        __tablename__ = "states"
+    __tablename__ = "states"
     name = Column(String(128), nullable=False)
     cities = relationship("City",  backref="state", cascade="delete")
 
