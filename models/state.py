@@ -10,7 +10,7 @@ from sqlalchemy import String
 from sqlalchemy.orm import relationship
 
 
-class State(BaseModel):
+class State(BaseModel, Base):
     """ State class
         Inherits from SQLAlchemy  links to  states.
 
