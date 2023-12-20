@@ -24,7 +24,7 @@ association_table = Table("place_amenity", Base.metadata,
                                  primary_key=True, nullable=False))
 
 
-class Place(BaseModel):
+class Place(BaseModel, Base):
     """ A place to stay
         Inherits from SQLAlchemy Base and links to the MySQL table places.
 
