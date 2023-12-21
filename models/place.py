@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Place Module for HBNB project """
+"""Defines the Place class."""
 import models
 from os import getenv
 from models.base_model import Base
@@ -25,8 +25,9 @@ association_table = Table("place_amenity", Base.metadata,
 
 
 class Place(BaseModel, Base):
-    """ A place to stay
-        Inherits from SQLAlchemy Base and links to the MySQL table places.
+    """Represents a Place for a MySQL database.
+
+    Inherits from SQLAlchemy Base and links to the MySQL table places.
 
     Attributes:
         __tablename__ (str): The name of the MySQL table to store places.
@@ -83,5 +84,3 @@ class Place(BaseModel, Base):
         def amenities(self, value):
             if type(value) == Amenity:
                 self.amenity_ids.append(value.id)
-
-
