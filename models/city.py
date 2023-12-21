@@ -9,14 +9,14 @@ from sqlalchemy.orm import relationship
 
 
 class City(BaseModel, Base):
-    """Represents a city for a MySQL database.
+    """ a city for a MySQL DB.
 
-    Inherits from SQLAlchemy Base and links to the MySQL table cities.
+    Inherits from SQLAlchemy Base , links to cities table.
 
     Attributes:
-        __tablename__ (str): The name of the MySQL table to store Cities.
-        name (sqlalchemy String): The name of the City.
-        state_id (sqlalchemy String): The state id of the City.
+        __tablename__ (str): Cities table name.
+        name (sqlalchemy String): City name.
+        state_id (sqlalchemy String): state id of City.
     """
     __tablename__ = "cities"
     name = Column(String(128), nullable=False)
