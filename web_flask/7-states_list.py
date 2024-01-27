@@ -3,7 +3,7 @@
 
 The application listens on 0.0.0.0, port 5000.
 Routes:
-    /states_list: HTML page with all State objects.
+    /states_list: HTML page  all State objects.
 """
 from models import storage
 from flask import Flask
